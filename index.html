@@ -10,27 +10,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
 
 <body class="bg-[#EFF6FF]">
-    <nav class="sticky top-0 w-full z-500 px-5 py-7 bg-[#fff] ">
+    <nav class="sticky top-0 w-full z-50 justify-between items-center flex px-5 py-7 bg-[#fff] ">
         <div class="nav-logo">
             <img src="https://swiftmove-colorlib.pages.dev/assets/img/logo.svg" alt="SwiftMove-logo">
         </div>
 
-        <div class="nav-links">
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
+        <div id="nav-links" class="hidden border-t border-b border-gray-300 md:border-t-0 md:border-b-0  md:static md:block absolute top-full left-0 w-full items-center px-3 py-5 md:p-0 bg-[#fff]">
+            <ul class="flex flex-col md:flex-row md:items-center gap-3 mt-3 md:mt-0 justify-center font-semibold items-start">
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">How It Works</a></li>
+                <li><a href="">Areas</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">Testimonials</a></li>
+                <li><a href="">Quote</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
         </div>
 
-        <div class="nav-actions">
+        <div class="nav-actions flex items-center">
+            <div class="menu-btn sm:hidden cursor-pointer">
+                <div>
+                    <span id="nav-menu-icon" class=" material-symbols-outlined">
+                        menu
+                    </span>
+                </div>
+            </div>
+
             <div class="button"></div>
             <div class="button"></div>
         </div>
