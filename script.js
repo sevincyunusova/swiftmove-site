@@ -1,37 +1,56 @@
-// const navMenuOpen = document.getElementById('nav-menu-open');
-// const navMenuClose = document.getElementById('nav-menu-close');
+
 const navMenuBtn = document.getElementById('nav-menu-icon');
 const navLinks = document.getElementById('nav-links');
+const lightDarkBtn = document.getElementById('dark-light-btn');
 
-navMenuBtn.addEventListener('click', ()=>{
+// NAVBAR MENU BUTTON
+navMenuBtn.addEventListener('click', () => {
     navLinks.classList.toggle('hidden');
 
-    if(navLinks.classList.contains('hidden')){
+    if (navLinks.classList.contains('hidden')) {
         navMenuBtn.textContent = 'menu';
     }
-    else{
+    else {
         navMenuBtn.textContent = 'close';
     }
 });
 
-// navMenuOpen.addEventListener('click', () => {
-//     navLinks.classList.remove('hidden');
-//     navLinks.classList.add('block');
+// NAVBAR DARK-LIGHT MODE BUTTON
+lightDarkBtn.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+    if (document.documentElement.classList.contains('dark')) {
+        lightDarkBtn.firstElementChild.textContent = 'light_mode';
+    } else {
+        lightDarkBtn.firstElementChild.textContent = 'dark_mode';
+    }
+});
 
-//     navMenuOpen.classList.remove('block');
-//     navMenuOpen.classList.add('hidden');
 
-//     navMenuClose.classList.remove('hidden');
-//     navMenuClose.classList.add('block');
-// })
 
-// navMenuClose.addEventListener('click', () => {
-//     navLinks.classList.remove('block');
-//     navLinks.classList.add('hidden');
 
-//     navMenuOpen.classList.remove('hidden');
-//     navMenuOpen.classList.add('block');
 
-//     navMenuClose.classList.remove('block');
-//     navMenuClose.classList.add('hidden');
-// })
+
+
+
+
+
+
+
+// lightDarkBtn.addEventListener('click', () => {
+//     document.documentElement.classList.toggle('dark');
+// });
+
+
+
+
+
+// lightDarkBtn.addEventListener('click', () => {
+//     document.documentElement.classList.toggle('dark');
+//     let currentText = lightDarkBtn.textContent;
+//     if (currentText.includes('dark')) {
+//         lightDarkBtn.textContent = currentText.replace('dark', 'light');
+//     }
+//     else{
+//         lightDarkBtn.textContent = currentText.replace('light', 'dark');
+//     }
+// });
