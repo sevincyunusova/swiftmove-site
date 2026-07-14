@@ -2,6 +2,7 @@
 const navMenuBtn = document.getElementById('nav-menu-icon');
 const navLinks = document.getElementById('nav-links');
 const lightDarkBtn = document.getElementById('dark-light-btn');
+const heroWordItem = document.querySelectorAll('.word-item');
 
 // NAVBAR MENU BUTTON
 navMenuBtn.addEventListener('click', () => {
@@ -25,7 +26,21 @@ lightDarkBtn.addEventListener('click', () => {
     }
 });
 
-
+// HERO WORD CYCLE
+function wordcycle() {
+    let currentIndex = 0;
+    const wordCount = heroWordItem.length;
+    
+    setInterval(()=>{
+        heroWordItem[currentIndex].classList.replace('inline-block', 'hidden');
+    currentIndex += 1;
+    if (currentIndex >= wordCount) {
+        currentIndex = 0;
+    }
+    heroWordItem[currentIndex].classList.replace('hidden', 'inline-block');
+    }, 2000);
+}
+wordcycle();
 
 
 
