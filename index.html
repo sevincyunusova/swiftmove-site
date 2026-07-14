@@ -217,7 +217,7 @@
             </div>
         </div>
 
-        <div class="services-selection bg-[#F9FAFB] dark:bg-[#111827] -mx-10 pt-10 pb-10">
+        <div class="services-selection dark:bg-[#111827] -mx-10 pt-10 pb-10">
             <div class="services-header text-center">
                 <div class="servicese-badge w-fit mx-auto rounded-[20px] px-5  bg-[#DBEAFE] dark:bg-[#172958]">
                     <span class="text-[#1d4ed8] dark:text-[#DBEAFE]">Servies</span>
@@ -298,7 +298,7 @@
             </div>
         </div>
 
-        <div class="how-it-works-section relative bg-[#fff] dark:bg-[#030712] -mx-10 pt-[50px] pb-[80px]">
+        <div class="how-it-works-section relative pt-[50px] pb-[80px]">
             <div class="process-header pt-10 text-center">
                 <div class="servicese-badge w-fit mx-auto rounded-[20px] px-5  bg-[#DBEAFE] dark:bg-[#172958]">
                     <span class="text-[#1d4ed8] dark:text-[#DBEAFE]">How It Works</span>
@@ -308,9 +308,11 @@
                 <p class="max-w-2xl mx-auto text-[#4b5563]">We have streamlined the moving process to make it as simple
                     and transparent as possible.</p>
             </div>
-            <div class="process-timeline absolute top-[230px] left-0 h-[3px] w-full bg-[#BFDBFE] dark:bg-[#2563EB]">
+            <!-- DESKTOP -->
+            <div
+                class="process-timeline hidden lg:grid absolute top-[230px] left-0 h-[3px] w-full bg-[#BFDBFE] dark:bg-[#2563EB]">
             </div>
-            <div class="step-num relative grid grid-cols-4 text-center">
+            <div class="step-num  hidden lg:grid relative grid grid-cols-4 text-center">
                 <p
                     class="w-20 h-20 flex items-center justify-center mx-auto text-[30px] text-[#fff] font-bold bg-[#2563EB] rounded-full">
                     01</p>
@@ -324,19 +326,96 @@
                     class="w-20 h-20 flex items-center justify-center mx-auto text-[30px] text-[#fff] font-bold bg-[#2563EB] rounded-full">
                     04</p>
             </div>
-            <div class="step-title text-center grid grid-cols-4 mt-3">
+            <div class="step-title hidden lg:grid text-center grid grid-cols-4 mt-3">
                 <p class="font-bold text-[18px] dark:text-[#fff]">Request a Quote</p>
                 <p class="font-bold text-[18px] dark:text-[#fff]">Schedule Your Move</p>
                 <p class="font-bold text-[18px] dark:text-[#fff]">We Handle Everything</p>
                 <p class="font-bold text-[18px] dark:text-[#fff]">Welcome Home</p>
             </div>
-            <div class="step-content grid grid-cols-4 text-center text-[#4b5563]">
+            <div class="step-content hidden lg:grid grid grid-cols-4 text-center text-[#4b5563]">
                 <p>Fill out our quick form or call us for a free, no-obligation estimate tailored to your move.</p>
                 <p>Pick your preferred date and time. We will confirm all the details and assign your crew.</p>
                 <p>Our professional team handles packing, loading, and transporting with care and precision.</p>
                 <p>We unload, place furniture exactly where you want it, and do a final walkthrough with you.</p>
             </div>
 
+            <!-- MOBILE -->
+            <div class="lg:hidden">
+                <div class="flex gap-5">
+                    <div class="flex flex-col items-center">
+                        <div
+                            class="w-20 h-20 flex items-center justify-center text-[30px] text-white font-bold bg-[#2563EB] rounded-full">
+                            01
+                        </div>
+                        <div class="w-[3px] h-full bg-[#BFDBFE] dark:bg-[#2563EB]"></div>
+                    </div>
+                    <div class="pt-3">
+                        <h3 class="font-bold text-[18px] dark:text-white">
+                            Request a Quote
+                        </h3>
+                        <p class="text-[#4b5563] dark:text-[#9ca3af] mt-2">
+                            Fill out our quick form or call us for a free, no-obligation estimate tailored to your move.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex gap-5">
+                    <div class="flex flex-col items-center">
+                        <div
+                            class="w-20 h-20 flex items-center justify-center text-[30px] text-white font-bold bg-[#2563EB] rounded-full">
+                            02
+                        </div>
+
+                        <div class="w-[3px] h-full bg-[#BFDBFE] dark:bg-[#2563EB]"></div>
+                    </div>
+
+                    <div class="pt-3">
+                        <h3 class="font-bold text-[18px] dark:text-white">
+                            Schedule Your Move
+                        </h3>
+
+                        <p class="text-[#4b5563] dark:text-[#9ca3af] mt-2">
+                            Pick your preferred date and time. We will confirm all the details and assign your crew.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex gap-5">
+                    <div class="flex flex-col items-center">
+                        <div
+                            class="w-20 h-20 flex items-center justify-center text-[30px] text-white font-bold bg-[#2563EB] rounded-full">
+                            03
+                        </div>
+                        <div class="w-[3px] h-full bg-[#BFDBFE] dark:bg-[#2563EB]"></div>
+                    </div>
+                    <div class="pt-3">
+                        <h3 class="font-bold text-[18px] dark:text-white">
+                            We Handle Everything
+                        </h3>
+                        <p class="text-[#4b5563] dark:text-[#9ca3af] mt-2">
+                            Our professional team handles packing, loading, and transporting with care and precision.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex gap-5">
+                    <div class="flex flex-col items-center">
+                        <div
+                            class="w-20 h-20 flex items-center justify-center text-[30px] text-white font-bold bg-[#2563EB] rounded-full">
+                            04
+                        </div>
+                        <div class="w-[3px] h-full bg-[#BFDBFE] dark:bg-[#2563EB]"></div>
+                    </div>
+                    <div class="pt-3">
+                        <h3 class="font-bold text-[18px] dark:text-white">
+                            Welcome Home
+                        </h3>
+                        <p class="text-[#4b5563] dark:text-[#9ca3af] mt-2">
+                            We unload, place furniture exactly where you want it, and do a final walkthrough with you.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
