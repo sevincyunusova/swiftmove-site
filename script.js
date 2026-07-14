@@ -3,6 +3,7 @@ const navMenuBtn = document.getElementById('nav-menu-icon');
 const navLinks = document.getElementById('nav-links');
 const lightDarkBtn = document.getElementById('dark-light-btn');
 const heroWordItem = document.querySelectorAll('.word-item');
+const counters = document.querySelectorAll('.stat-item');
 
 // NAVBAR MENU BUTTON
 navMenuBtn.addEventListener('click', () => {
@@ -30,21 +31,32 @@ lightDarkBtn.addEventListener('click', () => {
 function wordcycle() {
     let currentIndex = 0;
     const wordCount = heroWordItem.length;
-    
-    setInterval(()=>{
+
+    setInterval(() => {
         heroWordItem[currentIndex].classList.replace('inline-block', 'hidden');
-    currentIndex += 1;
-    if (currentIndex >= wordCount) {
-        currentIndex = 0;
-    }
-    heroWordItem[currentIndex].classList.replace('hidden', 'inline-block');
+        currentIndex += 1;
+        if (currentIndex >= wordCount) {
+            currentIndex = 0;
+        }
+        heroWordItem[currentIndex].classList.replace('hidden', 'inline-block');
     }, 2000);
 }
 wordcycle();
 
-
-
-
+// COUNTER
+function counter() {
+    counters.forEach(statItem => {
+        const target = Number(statItem.dataset.target);
+        let nowNum = 0;
+        const interval = setInterval(() => {
+            nowNum += Math.ceil(target / 100); statItem.textContent = nowNum;
+            if (nowNum >= target) {
+                clearInterval(interval);
+            }
+        }, 10)
+    })
+}
+counter()
 
 
 
