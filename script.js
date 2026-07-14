@@ -4,6 +4,7 @@ const navLinks = document.getElementById('nav-links');
 const lightDarkBtn = document.getElementById('dark-light-btn');
 const heroWordItem = document.querySelectorAll('.word-item');
 const counters = document.querySelectorAll('.stat-item');
+const backToTopBtn = document.getElementById('backToTop');
 
 // NAVBAR MENU BUTTON
 navMenuBtn.addEventListener('click', () => {
@@ -58,8 +59,21 @@ function counter() {
 }
 counter()
 
-
-
+// Back To Top Button
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+        backToTopBtn.classList.remove('hidden');
+    }
+    else {
+        backToTopBtn.classList.add('hidden');
+    }
+})
+backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
 
 
 
