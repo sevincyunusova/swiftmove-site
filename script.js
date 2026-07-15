@@ -5,6 +5,11 @@ const lightDarkBtn = document.getElementById('dark-light-btn');
 const heroWordItem = document.querySelectorAll('.word-item');
 const counters = document.querySelectorAll('.stat-item');
 const backToTopBtn = document.getElementById('backToTop');
+const track = document.getElementById('sliders');
+const slides = document.querySelectorAll('.slider');
+const nextBtn = document.getElementById('right-btn');
+const prevBtn = document.getElementById('left-btn');
+const sliderDots = document.querySelectorAll('.dot');
 
 // NAVBAR MENU BUTTON
 navMenuBtn.addEventListener('click', () => {
@@ -75,23 +80,80 @@ backToTopBtn.addEventListener('click', () => {
     });
 });
 
+// SLIDER
+const slideCount = slides.length;
+let currentIndex = 0;
+function updateslider() {
+    const slideWidth = slides[0].offsetWidth + 20;
+    track.style.transform = `translateX(-${currentIndex * slideWidth}px)
+    `;
+    updateDots()
+};
+function slider() {
+    setInterval(() => {
+        currentIndex++;
+        if (currentIndex >= slideCount) {
+            currentIndex = 0;
+        }
+        updateslider();
+    }, 3000)
+}
+updateDots();
+clickDots();
+slider();
 
+// SlIDER BTNS
+nextBtn.addEventListener('click', () => {
+    currentIndex++;
+    if (currentIndex >= slideCount) {
+        currentIndex = 0;
+    }
+    updateslider();
+});
 
-// lightDarkBtn.addEventListener('click', () => {
-//     document.documentElement.classList.toggle('dark');
+prevBtn.addEventListener('click', () => {
+    currentIndex--;
+    if (currentIndex <= 0) {
+        currentIndex = slideCount - 1;
+    }
+    updateslider();
+})
+
+// SLIDER DOTS
+function updateDots() {
+    let activeDotIndex = Math.floor(currentIndex / 3);
+
+    sliderDots.forEach(dot => {
+        dot.classList.remove('bg-[#2563EB]', 'dark:bg-[#60A5FA]');
+        dot.classList.add('bg-[#D1D5DB]', 'dark:bg-[#4B5563]');
+    });
+
+    sliderDots[activeDotIndex].classList.remove('bg-[#D1D5DB]', 'dark:bg-[#4B5563]');
+    sliderDots[activeDotIndex].classList.add('bg-[#2563EB]', 'dark:bg-[#60A5FA]');
+};
+
+// DOT CLICK
+function clickDots() {
+    sliderDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentIndex = index * 3;
+            updateslider();
+        })
+    })
+};
+clickDots();
+
+// sliderDots.forEach(dot => {
+//     dot.classList.remove('active');
+//     sliderDots.currentIndex.classList.add('active');
 // });
-
-
-
-
-
-// lightDarkBtn.addEventListener('click', () => {
-//     document.documentElement.classList.toggle('dark');
-//     let currentText = lightDarkBtn.textContent;
-//     if (currentText.includes('dark')) {
-//         lightDarkBtn.textContent = currentText.replace('dark', 'light');
-//     }
-//     else{
-//         lightDarkBtn.textContent = currentText.replace('light', 'dark');
+// updateslider();
+// sliderDots.forEach(dot => {
+//     if (dot.classList.contains('active')) {
+//         dot.classList.remove('bg-[#D1D5DB]', 'dark:bg-[#4B5563]');
+//         dot.classList.add('bg-[#2563EB]', 'dark:bg-[#60A5FA]');
+//     } else {
+//         dot.classList.remove('bg-[#2563EB]', 'dark:bg-[#60A5FA]');
+//         dot.classList.add('bg-[#D1D5DB]', 'dark:bg-[#4B5563]');
 //     }
 // });
