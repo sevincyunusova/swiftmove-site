@@ -142,18 +142,3 @@ function clickDots() {
     })
 };
 clickDots();
-
-// sliderDots.forEach(dot => {
-//     dot.classList.remove('active');
-//     sliderDots.currentIndex.classList.add('active');
-// });
-// updateslider();
-// sliderDots.forEach(dot => {
-//     if (dot.classList.contains('active')) {
-//         dot.classList.remove('bg-[#D1D5DB]', 'dark:bg-[#4B5563]');
-//         dot.classList.add('bg-[#2563EB]', 'dark:bg-[#60A5FA]');
-//     } else {
-//         dot.classList.remove('bg-[#2563EB]', 'dark:bg-[#60A5FA]');
-//         dot.classList.add('bg-[#D1D5DB]', 'dark:bg-[#4B5563]');
-//     }
-// });
