@@ -10,6 +10,9 @@ const slides = document.querySelectorAll('.slider');
 const nextBtn = document.getElementById('right-btn');
 const prevBtn = document.getElementById('left-btn');
 const sliderDots = document.querySelectorAll('.dot');
+const faqQuestion = document.querySelectorAll('.question');
+const faqAnswer = document.querySelectorAll('.answer');
+const faqIcon = document.querySelectorAll('.faqiqon');
 
 // NAVBAR MENU BUTTON
 navMenuBtn.addEventListener('click', () => {
@@ -142,3 +145,54 @@ function clickDots() {
     })
 };
 clickDots();
+
+
+// FAQ
+faqQuestion.forEach(question => {
+    question.addEventListener('click', () => {
+        const currentAnswer = question.nextElementSibling;
+        const currentIcon = question.querySelector('.faqiqon');
+
+        faqAnswer.forEach(answer => {
+            if (answer !== currentAnswer) {
+                answer.classList.add('hidden');
+            }
+        });
+
+        faqIcon.forEach(icon => {
+            if (icon !== currentIcon) {
+                icon.textContent = 'add';
+            }
+        });
+
+        currentAnswer.classList.toggle('hidden');
+
+        if (currentAnswer.classList.contains('hidden')) {
+            currentIcon.textContent = 'add';
+        } else {
+            currentIcon.textContent = 'close';
+        }
+    });
+});
+
+
+//FAQ BTN QALIB ANIMASIA QALIB 
+
+// faqQuestion.forEach(question=>{
+//     question.addEventListener('click', ()=>{
+//     const faqAnswer = question.nextElementSibling;
+//     const icon = question.querySelector('.faqiqon');
+//     faqAnswer.forEach(item=>{
+//         if(item != faqAnswer){
+//             item.classList.add('hidden')
+//         };
+//     });
+//     faqAnswer.classList.toggle('hidden');
+//     faqIcon.forEach(span=>{
+//     if(!faqAnswer,classList.contains('hidden')){
+//         span.textContent = 'close';
+//     }
+// });
+//     });
+// })
+
