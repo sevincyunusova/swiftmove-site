@@ -176,23 +176,3 @@ faqQuestion.forEach(question => {
 });
 
 
-//FAQ BTN QALIB ANIMASIA QALIB 
-
-// faqQuestion.forEach(question=>{
-//     question.addEventListener('click', ()=>{
-//     const faqAnswer = question.nextElementSibling;
-//     const icon = question.querySelector('.faqiqon');
-//     faqAnswer.forEach(item=>{
-//         if(item != faqAnswer){
-//             item.classList.add('hidden')
-//         };
-//     });
-//     faqAnswer.classList.toggle('hidden');
-//     faqIcon.forEach(span=>{
-//     if(!faqAnswer,classList.contains('hidden')){
-//         span.textContent = 'close';
-//     }
-// });
-//     });
-// })
-

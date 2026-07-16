@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SwiftMove</title>
     <link rel="stylesheet" href="./style.css">
+    <!-- GOOGLE FONTS ICONS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,7 +23,7 @@
 </head>
 
 <body
-    class="bg-[#EFF6FF] dark:bg-[#0E1523] text-gray-900 dark:text-gray-100 transition-colors duration-300 overflow-x-hidden">
+    class="bg-[#EFF6FF] dark:bg-[#0E1523] text-gray-900 dark:text-gray-100 transition-colors duration-300 overflow-x-hidden ">
     <nav
         class="sticky top-0 w-full z-50 justify-between items-center flex px-5 py-5 bg-[#fff] w-full dark:bg-[#030712] transition-colors duration-300">
         <div class="nav-logo cursor-pointer">
@@ -217,10 +220,10 @@
             </div>
         </div>
 
-        <div class="services-selection dark:bg-[#111827] -mx-10 pt-10 pb-10">
+        <div id="services" class="services-selection dark:bg-[#111827] -mx-10 pt-10 pb-10">
             <div class="services-header text-center">
                 <div class="servicese-badge w-fit mx-auto rounded-[20px] px-5  bg-[#DBEAFE] dark:bg-[#172958]">
-                    <span class="text-[#1d4ed8] dark:text-[#DBEAFE]">Servies</span>
+                    <span class="text-[#1d4ed8] dark:text-[#DBEAFE]">Services</span>
                 </div>
                 <h2 class="services-header text-[30px] font-bold dark:text-[#fff] mt-2">Moving Solutions for Every Need
                 </h2>
@@ -1220,7 +1223,7 @@
         </div>
     </div>
 
-    <div class="faq-section mb-10 pb-10 px-10 lg:py-[40px]">
+    <div id="faq" class="faq-section mb-10 pb-10 px-10 lg:py-[40px]">
         <div class="faq-header pt-10 text-center">
             <div class="testimonials-badge w-fit mx-auto rounded-[20px] px-5  bg-[#DBEAFE] dark:bg-[#172958]">
                 <span class="text-[#1d4ed8] dark:text-[#DBEAFE]">FAQ</span>
@@ -1313,7 +1316,7 @@
     </div>
 
     <div
-        class="move-section relative overflow-hidden px-[40px] sm:px-[50px] lg:px-[100px] py-[80px] lg:py-[100px] mb-10 bg-[#2563EB]">
+        class="move-section relative overflow-hidden px-[40px] sm:px-[50px] lg:px-[100px] py-[80px] lg:py-[100px] bg-[#2563EB]">
         <div
             class="absolute -left-40 top-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-white/30 blur-[180px]">
         </div>
@@ -1345,6 +1348,95 @@
                     </span>
                     <span>Call Now</span>
                 </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer  px-10 py-[60px] bg-[#111827]">
+        <div class="flex flex-col lg:flex-row justify-between">
+            <div class="flex flex-col text-[#9ca3af]">
+                <div class="site-logo cursor-pointer mb-4">
+                    <a href="">
+                        <img src="https://swiftmove-colorlib.pages.dev/assets/img/logo-light.svg" alt="">
+                    </a>
+                </div>
+                <p class="mt-2 mb-3 hover:text-white transition duration-300 max-w-[330px]">Professional moving
+                    services that make
+                    your
+                    relocation stress-free. Licensed, insured, and trusted by thousands.</p>
+                <div>
+                    <div class="item mt-2">
+                        <a href="tel:+5558901234" class="flex items-center gap-2">
+                            <span class="material-symbols-outlined">
+                                call
+                            </span>
+                            <span>(555) 890-1234</span>
+                        </a>
+                    </div>
+                    <div class="item mt-2">
+                        <a class="flex items-center gap-2" href="mailto:info@swiftmove.com">
+                            <span class="material-symbols-outlined">
+                                mail
+                            </span>
+                            <span>info@switmove.com</span>
+                        </a>
+                    </div>
+                    <div class="item mt-2">
+                        <a class="flex items-center gap-2" href="https://maps.google.com/?q=New+York,+NY"
+                            target="blank">
+                            <span class="material-symbols-outlined">
+                                place
+                            </span>
+                            <span>123 Main Street, New York, NY</span> </a>
+                    </div>
+                </div>
+                <div class="icons flex gap-3 mt-7">
+                    <i
+                        class="fa-brands fa-facebook-f px-4 py-3 text-[25px] text-[#9ca3af] hover:text-[#fff] bg-[#1f2937] hover:bg-[#374151] transition duration-500 cursor-pointer rounded-lg"></i>
+                    <i
+                        class="fa-brands fa-x-twitter p-3 text-[27px] text-[#9ca3af] hover:text-[#fff] bg-[#1f2937] hover:bg-[#374151] transition duration-500 cursor-pointer rounded-lg"></i>
+                    <i
+                        class="fa-brands fa-instagram p-3 text-[27px] text-[#9ca3af] hover:text-[#fff] bg-[#1f2937] hover:bg-[#374151] transition duration-500 cursor-pointer rounded-lg"></i>
+                </div>
+            </div>
+            <div class="flex flex-col sm:grid sm:grid-cols-2 md:grid-cols-3 gap-10 lg:mx-auto mt-10 lg:mt-0">
+                <div class="flex flex-col gap-3">
+                    <p class="font-semibold text-white">Services</p>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">Local Moving</a>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">Long
+                        Distance</a>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">Commercial
+                        Moving</a>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">Packing
+                        Services</a>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">Storage
+                        Solutions</a>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <p class="font-semibold text-white">Company</p>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">About Us</a>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">Careers</a>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">Blog</a>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">Press</a>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <p class="font-semibold text-white">Support</p>
+                    <a href="#faq" class="text-[#9ca3af] hover:text-white transition duration-500">FAQ</a>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">Contact Us</a>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">Claims</a>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">Licensing</a>
+                </div>
+            </div>
+        </div>
+        <div class="w-full mt-10 border border-[#1f2937]"></div>
+        <div class="flex flex-col lg:flex-row justify-between mt-10">
+            <div class="flex items-center gap-1 text-[#9ca3af] text-sm lg:text-md">
+                <i class="fa-regular fa-copyright"></i>
+                <p> 2026 SwiftMove. All rights reserved. Licensed & Insured.</p>
+            </div>
+            <div class="text-[#9ca3af] hidden lg:block flex gap-3">
+                <a class="hover:text-white transition duration-500" href="./privacy.html">Privacy Policy</a>
+                <a class="hover:text-white transition duration-500" href="./TOS.html">Terms of Service</a>
             </div>
         </div>
     </div>
