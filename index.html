@@ -1061,7 +1061,7 @@
         </div>
     </div>
 
-    <div class="quotes-section mb-10 pb-10">
+    <div class="quotes-section mb-10 pb-10 px-10">
         <div class="quotes-header pt-10 text-center">
             <div class="quotes-badge w-fit mx-auto rounded-[20px] px-5  bg-[#FFEDD5] dark:bg-[#3F1A12]">
                 <span class="text-[#c2410c] dark:text-[#fdba74] font-semibold">Free Quote</span>
@@ -1074,48 +1074,48 @@
         </div>
 
         <div class="quotes-content">
-            <div class="quotes-form mt-10 max-w-4xl py-5 bg-[#F9FAFB] dark:bg-[#111827] rounded-xl">
+            <div class="quotes-form mt-10 max-w-4xl  py-5 bg-[#F9FAFB] dark:bg-[#111827] rounded-xl">
                 <form action="">
-                    <div class="grid grid-cols-2 gap-5 px-10 py-3">
+                    <div class="md:grid md:grid-cols-2 gap-5 px-5 mx-auto md:px-10 py-3">
                         <div class="flex flex-col gap-1">
                             <label class="dark:text-[#fff]" for="name">Full Name</label>
                             <input
-                                class="max-w-[380px] py-3 px-5 dark:bg-[#1F2937] rounded-xl border border-gray-300 focus:border-[#2563EB] focus:outline-none focus:border-[3px]"
+                                class="w-full lg:max-w-[380px] py-3 px-5 dark:bg-[#1F2937] rounded-xl border border-gray-300 focus:border-[#2563EB] focus:outline-none focus:border-[3px]"
                                 type="text" name="name" placeholder="John Smith" required>
                         </div>
                         <div class="flex flex-col gap-1">
                             <label class="dark:text-[#fff]" for="name">Email</label>
                             <input
-                                class="max-w-[380px] py-3 px-5 dark:bg-[#1F2937] rounded-xl border border-gray-300 focus:border-[#2563EB] focus:outline-none focus:border-[3px]"
+                                class="w-full lg:max-w-[380px] py-3 px-5 dark:bg-[#1F2937] rounded-xl border border-gray-300 focus:border-[#2563EB] focus:outline-none focus:border-[3px]"
                                 type="email" name="name" placeholder="john@example.com" required>
                         </div>
                         <div class="flex flex-col gap-1">
                             <label class="dark:text-[#fff]" for="name">Phone</label>
                             <input
-                                class="max-w-[380px] py-3 px-5 dark:bg-[#1F2937] rounded-xl border border-gray-300 focus:border-[#2563EB] focus:outline-none focus:border-[3px]"
+                                class="w-full lg:max-w-[380px] py-3 px-5 dark:bg-[#1F2937] rounded-xl border border-gray-300 focus:border-[#2563EB] focus:outline-none focus:border-[3px]"
                                 type="tel" name="" placeholder="(55) 000 0000 " required>
                         </div>
                         <div class="flex flex-col gap-1">
                             <label class="dark:text-[#fff]" for="name">Move Date</label>
                             <input
-                                class="max-w-[380px] py-3 px-5 dark:bg-[#1F2937] rounded-xl border border-gray-300 focus:border-[#2563EB] focus:outline-none focus:border-[3px]"
+                                class="w-full lg:max-w-[380px] py-3 px-5 dark:bg-[#1F2937] rounded-xl border border-gray-300 focus:border-[#2563EB] focus:outline-none focus:border-[3px]"
                                 type="date" name="date" placeholder="gg.aa.yyyy" required>
                         </div>
                         <div class="flex flex-col gap-1">
                             <label class="dark:text-[#fff]" for="name">Moving From</label>
                             <input
-                                class="max-w-[380px] py-3 px-5 dark:bg-[#1F2937] rounded-xl border border-gray-300 focus:border-[#2563EB] focus:outline-none focus:border-[3px]"
+                                class="w-full lg:max-w-[380px] py-3 px-5 dark:bg-[#1F2937] rounded-xl border border-gray-300 focus:border-[#2563EB] focus:outline-none focus:border-[3px]"
                                 type="text" name="date" placeholder="City or ZIP code" required>
                         </div>
                         <div class="flex flex-col gap-1">
                             <label class="dark:text-[#fff]" for="code">Moving To</label>
                             <input
-                                class="max-w-[380px] py-3 px-5 dark:bg-[#1F2937] rounded-xl border border-gray-300 focus:border-[#2563EB] focus:outline-none focus:border-[3px]"
+                                class="w-full lg:max-w-[380px] py-3 px-5 dark:bg-[#1F2937] rounded-xl border border-gray-300 focus:border-[#2563EB] focus:outline-none focus:border-[3px]"
                                 type="text" name="code" placeholder="City or ZIP code" required>
                         </div>
 
                     </div>
-                    <div class="select-opt flex flex-col gap-1 px-[46px]">
+                    <div class="select-opt flex flex-col gap-1 px-4 lg:px-[46px]">
                         <label class="dark:text-[#fff]" for="size">Home Size</label>
                         <select
                             class=" py-3 px-5 w-full dark:bg-[#1F2937] rounded-xl border border-gray-300 focus:border-[#2563EB] focus:outline-none focus:border-[3px]"
@@ -1128,12 +1128,12 @@
                             <option value="">4+ Bedrooms</option>
                         </select>
                     </div>
-                    <div class="checkboxes px-10 mt-3">
+                    <div class="checkboxes px-5 lg:px-10 mt-3">
                         <label for="checkbox">Additional Services</label>
-                        <div class="flex gap-3">
+                        <div class="flex flex-wrap md:whitespace-nowrap items-center justify-baseline md:justify-center gap-3">
                             <div class="flex gap-1">
                                 <input type="checkbox">
-                                <span>Packing & Unpacking</span>
+                                <span class="whitespace-nowrap">Packing & Unpacking</span>
                             </div>
                             <div class="flex gap-1">
                                 <input type="checkbox">
@@ -1141,17 +1141,20 @@
                             </div>
                             <div class="flex gap-1">
                                 <input type="checkbox">
-                                <span>Piano / Specialty Items</span>
+                                <span class="whitespace-nowrap">Piano / Specialty Items</span>
                             </div>
                         </div>
                     </div>
-                    <div class="textarea flex flex-col gap-2 px-10 mt-5">
+                    <div class="textarea flex flex-col gap-2 px-5 lg:px-10 mt-5">
                         <label for="textarea">Additional Details</label>
                         <textarea
                             class="border border-gray-300 px-5 py-3 resize-y max-h-[300px] dark:bg-[#1F2937]  rounded-xl focus:border-[#2563EB] focus:outline-none focus:border-[3px]"
                             placeholder="Tell us about any special requirements..."></textarea>
                     </div>
                 </form>
+                <div class="form-btn px-5 lg:px-10 mt-8"><button
+                        class="bg-[#f97316] hover:bg-[#EA580C] hover:scale-[101%] hover:shadow-[0_20px_40px_-10px_rgba(234,88,12,0.8)] transition duration-500 shadow-[0_20px_40px_-10px_rgba(234,88,12,0.6)] font-semibold text-[#fff] text-center w-full px-5 py-3 rounded-xl">Get
+                        Free Quote</button></div>
             </div>
             <div class="quotes-right"></div>
         </div>
