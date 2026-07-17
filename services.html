@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftMove</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- GOOGLE FONTS ICONS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+</head>
+
+<body
+    class="bg-[#EFF6FF] dark:bg-[#0E1523] text-gray-900 dark:text-gray-100 transition-colors duration-300 overflow-x-hidden">
+    <nav
+        class="sticky top-0 w-full z-50 justify-between items-center flex px-5 py-5 bg-[#fff] w-full dark:bg-[#030712] transition-colors duration-300">
+        <div class="nav-logo cursor-pointer">
+            <a class=" dark:hidden" href="./index.html">
+                <img src="https://swiftmove-colorlib.pages.dev/assets/img/logo.svg" alt="SwiftMove-logo">
+            </a>
+            <a class="hidden dark:block" href="">
+                <img src="https://swiftmove-colorlib.pages.dev/assets/img/logo-light.svg" alt="">
+            </a>
+        </div>
+
+        <div id="nav-links"
+            class="hidden lg:static lg:block border-t border-b border-gray-300 dark:border-gray-500 md:border-t-0 md:border-b-0  absolute top-full left-0 w-full items-center px-3 py-5 md:p-0 bg-[#fff] dark:bg-[#030712] transition-colors duration-300">
+            <ul
+                class="flex flex-col lg:flex-row lg:items-center gap-8 mt-3 lg:mt-0 justify-center font-semibold items-start">
+                <li
+                    class="text-sm text-[#505560] dark:text-[#9ca3af] dark:hover:text-[#fff] hover:text-[#000]transition-colors duration-500">
+                    <a href="./about.html">About</a>
+                </li>
+                <li
+                    class="text-sm  text-[#505560] dark:text-[#fff] dark:hover:text-[#000] transition-colors duration-500">
+                    <a href="./services.html">Services</a>
+                </li>
+                <li
+                    class="text-sm text-[#505560] dark:text-[#9ca3af] dark:hover:text-[#fff] hover:text-[#000] transition-colors duration-500 whitespace-nowrap">
+                    <a href="">How It
+                        Works</a>
+                </li>
+                <li
+                    class="text-sm text-[#505560] dark:text-[#9ca3af] dark:hover:text-[#fff] hover:text-[#000] transition-colors duration-500">
+                    <a href="">Areas</a>
+                </li>
+                <li
+                    class="text-sm text-[#505560] dark:text-[#9ca3af] dark:hover:text-[#fff] hover:text-[#000] transition-colors duration-500">
+                    <a href="">Pricing</a>
+                </li>
+                <li
+                    class="text-sm text-[#505560] dark:text-[#9ca3af] dark:hover:text-[#fff] hover:text-[#000] transition-colors duration-500">
+                    <a href="">Testimonials</a>
+                </li>
+                <li
+                    class="text-sm text-[#505560] dark:text-[#9ca3af] dark:hover:text-[#fff] hover:text-[#000] transition-colors duration-500">
+                    <a href="">Quote</a>
+                </li>
+                <li
+                    class="text-sm text-[#505560] dark:text-[#9ca3af] dark:hover:text-[#fff] hover:text-[#000] transition-colors duration-500">
+                    <a href="">Blog</a>
+                </li>
+                <li
+                    class="text-sm text-[#505560] dark:text-[#9ca3af] dark:hover:text-[#fff] hover:text-[#000] transition-colors duration-500">
+                    <a href="">Contact</a>
+                </li>
+            </ul>
+            <div class="button mt-5 border-t border-gray-300 dark:border-gray-500 -mx-3 px-5 lg:hidden">
+                <button
+                    class="bg-[#f97316] hover:bg-[#EA580C] text-[#fff] font-semibold transition-colors duration-300 rounded-md w-full mt-5 py-2 whitespace-nowrap ">
+                    <a href="">Free Quote</a>
+                </button>
+            </div>
+        </div>
+
+        <div class="nav-actions flex items-center gap-3">
+            <button id="dark-light-btn"
+                class="hover:bg-[#F3F4F6] dark:hover:bg-[#1F2937] dark:text-[#80858D] flex justify-center items-center w-10 h-10 duration-500 rounded-md">
+                <span class="material-symbols-outlined text-md transition-colors duration-300">
+                    dark_mode
+                </span>
+            </button>
+            <div class="menu-btn lg:hidden flex items-center justify-center w-10 h-10 cursor-pointer">
+                <span id="nav-menu-icon" class="material-symbols-outlined">
+                    menu
+                </span>
+            </div>
+
+            <div class="button hidden lg:block">
+                <button
+                    class="bg-[#f97316] hover:bg-[#EA580C] text-[#fff] font-semibold transition-colors duration-300 rounded-md px-3 py-2 whitespace-nowrap ">
+                    <a href="">Free Quote</a>
+                </button>
+            </div>
+        </div>
+
+    </nav>
+
+    <button id="backToTop"
+        class="hidden fixed bottom-8 right-8 z-50 flex items-center justify-center bg-[#2563eb] hover:bg-[#1E60F2] hover:shadow-[0_12px_35px_rgba(30,96,242,0.45)] rounded-full p-4 transition-all duration-500 text-white">
+        <span class="material-symbols-outlined block">
+            keyboard_control_key
+        </span>
+    </button>
+
+    <div class="hero-section py-[90px]  bg-[#2563EB] dark:bg-[#1E3A8A] text-center">
+        <h1 class="mb-2 text-white font-bold text-[50px]">Our Services</h1>
+        <span class="mb-3 text-white">Professional moving services designed to make your relocation smooth, safe, and
+            stress-free.</span>
+        <div class="mt-5 text-[#bfdbfe]">
+            <a class="hover:text-white transition duration-500" href="./index.html">Home</a>
+            <span>/</span>
+            <span class="text-white">Services</span>
+        </div>
+    </div>
+
+    <div class="section px-10 py-[100px]">
+        <div class="header mb-10 text-center">
+            <h3 class="font-bold text-[35px] dark:text-white">Moving Solutions for Every Need</h3>
+            <span class="text-[#4b5563] text-[18px]">Whether you are moving across town or across the country, we have
+                the expertise to get you there.</span>
+        </div>
+        <div class="content grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div
+                class="px-7 py-5 w-fit mx-auto dark:bg-[#1F2937] shadow-[0_2px_10px_rgba(0,0,0,0.08)] rounded-2xl hover:scale-[101%] transition duration-500">
+                <span
+                    class="material-symbols-outlined mb-3 text-[#2563eb] dark:text-[#60a5fa] bg-[#DBEAFE] dark:bg-[#1E3160] px-3 py-3 rounded-xl">
+                    local_shipping
+                </span>
+                <h3 class="font-bold mb-2">Local Moving</h3>
+                <p class="text-[#4b5563] dark:text-[#9ca3af] max-w-[400px]">Fast, reliable local moves with careful
+                    handling of all your belongings.</p>
+                <div class="flex flex-col mt-3">
+                    <div class="flex gap-2">
+                        <span class="material-symbols-outlined text-[#3b82f6]">
+                            check
+                        </span>
+                        <span class="text-[#4b5563] dark:text-[#9ca3af]">Same-day availability</span>
+                    </div>
+                    <div class="flex gap-2">
+                        <span class="material-symbols-outlined text-[#3b82f6]">
+                            check
+                        </span>
+                        <span class="text-[#4b5563] dark:text-[#9ca3af]">Furniture disassembly</span>
+                    </div>
+                    <div class="flex gap-2">
+                        <span class="material-symbols-outlined text-[#3b82f6]">
+                            check
+                        </span>
+                        <span class="text-[#4b5563] dark:text-[#9ca3af]">Floor protection</span>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="px-7 py-5 w-fit mx-auto dark:bg-[#1F2937] shadow-[0_2px_10px_rgba(0,0,0,0.08)] rounded-2xl hover:scale-[101%] transition duration-500">
+                <span
+                    class="material-symbols-outlined mb-3 text-[#2563eb] dark:text-[#60a5fa] bg-[#DBEAFE] dark:bg-[#1E3160] px-3 py-3 rounded-xl">
+                    language
+                </span>
+                <h3 class="font-bold mb-2">Long Distance</h3>
+                <p class="text-[#4b5563] dark:text-[#9ca3af] max-w-[400px]">Coast-to-coast moving services with GPS
+                    tracking and guaranteed delivery dates.</p>
+                <div class="flex flex-col mt-3">
+                    <div class="flex gap-2">
+                        <span class="material-symbols-outlined text-[#3b82f6]">
+                            check
+                        </span>
+                        <span class="text-[#4b5563] dark:text-[#9ca3af]">Nationwide coverage</span>
+                    </div>
+                    <div class="flex gap-2">
+                        <span class="material-symbols-outlined text-[#3b82f6]">
+                            check
+                        </span>
+                        <span class="text-[#4b5563] dark:text-[#9ca3af]">GPS shipment tracking</span>
+                    </div>
+                    <div class="flex gap-2">
+                        <span class="material-symbols-outlined text-[#3b82f6]">
+                            check
+                        </span>
+                        <span class="text-[#4b5563] dark:text-[#9ca3af]">Guaranteed delivery dates</span>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="px-7 py-5 w-fit mx-auto dark:bg-[#1F2937] shadow-[0_2px_10px_rgba(0,0,0,0.08)] rounded-2xl hover:scale-[101%] transition duration-500">
+                <span
+                    class="material-symbols-outlined mb-3 text-[#2563eb] dark:text-[#60a5fa] bg-[#DBEAFE] dark:bg-[#1E3160] px-3 py-3 rounded-xl">
+                    box
+                </span>
+                <h3 class="font-bold mb-2">Packing & Unpacking</h3>
+                <p class="text-[#4b5563] dark:text-[#9ca3af] max-w-[400px]">Professional packing services using premium
+                    materials to protect your valuables.</p>
+                <div class="flex flex-col mt-3">
+                    <div class="flex gap-2">
+                        <span class="material-symbols-outlined text-[#3b82f6]">
+                            check
+                        </span>
+                        <span class="text-[#4b5563] dark:text-[#9ca3af]">Premium packing materials</span>
+                    </div>
+                    <div class="flex gap-2">
+                        <span class="material-symbols-outlined text-[#3b82f6]">
+                            check
+                        </span>
+                        <span class="text-[#4b5563] dark:text-[#9ca3af]">Fragile item specialists</span>
+                    </div>
+                    <div class="flex gap-2">
+                        <span class="material-symbols-outlined text-[#3b82f6]">
+                            check
+                        </span>
+                        <span class="text-[#4b5563] dark:text-[#9ca3af]">Unpacking & setup</span>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="px-7 py-5 w-fit mx-auto dark:bg-[#1F2937] shadow-[0_2px_10px_rgba(0,0,0,0.08)] rounded-2xl hover:scale-[101%] transition duration-500">
+                <span
+                    class="material-symbols-outlined mb-3 text-[#2563eb] dark:text-[#60a5fa] bg-[#DBEAFE] dark:bg-[#1E3160] px-3 py-3 rounded-xl">
+                    lock
+                </span>
+                <h3 class="font-bold mb-2">Storage Solutions</h3>
+                <p class="text-[#4b5563] dark:text-[#9ca3af] max-w-[400px]">Secure, climate-controlled storage
+                    facilities for short-term or long-term needs.</p>
+                <div class="flex flex-col mt-3">
+                    <div class="flex gap-2">
+                        <span class="material-symbols-outlined text-[#3b82f6]">
+                            check
+                        </span>
+                        <span class="text-[#4b5563] dark:text-[#9ca3af]">Climate-controlled units</span>
+                    </div>
+                    <div class="flex gap-2">
+                        <span class="material-symbols-outlined text-[#3b82f6]">
+                            check
+                        </span>
+                        <span class="text-[#4b5563] dark:text-[#9ca3af]">Flexible lease terms</span>
+                    </div>
+                    <div class="flex gap-2">
+                        <span class="material-symbols-outlined text-[#3b82f6]">
+                            check
+                        </span>
+                        <span class="text-[#4b5563] dark:text-[#9ca3af]">24/7 security monitoring</span>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="px-7 py-5 w-fit mx-auto dark:bg-[#1F2937] shadow-[0_2px_10px_rgba(0,0,0,0.08)] rounded-2xl hover:scale-[101%] transition duration-500 ">
+                <span
+                    class="material-symbols-outlined mb-3 text-[#2563eb] dark:text-[#60a5fa] bg-[#DBEAFE] dark:bg-[#1E3160] px-3 py-3 rounded-xl">
+                    domain
+                </span>
+                <h3 class="font-bold mb-2">Commercial Moving</h3>
+                <p class="text-[#4b5563] dark:text-[#9ca3af] max-w-[400px]">Minimize downtime with our efficient office
+                    and commercial relocation services.</p>
+                <div class="flex flex-col mt-3">
+                    <div class="flex gap-2">
+                        <span class="material-symbols-outlined text-[#3b82f6]">
+                            check
+                        </span>
+                        <span class="text-[#4b5563] dark:text-[#9ca3af]">Weekend & after-hours moves</span>
+                    </div>
+                    <div class="flex gap-2">
+                        <span class="material-symbols-outlined text-[#3b82f6]">
+                            check
+                        </span>
+                        <span class="text-[#4b5563] dark:text-[#9ca3af]">IT equipment handling</span>
+                    </div>
+                    <div class="flex gap-2">
+                        <span class="material-symbols-outlined text-[#3b82f6]">
+                            check
+                        </span>
+                        <span class="text-[#4b5563] dark:text-[#9ca3af]">Workstation setup</span>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="px-7 py-5 w-fit mx-auto dark:bg-[#1F2937] shadow-[0_2px_10px_rgba(0,0,0,0.08)] rounded-2xl hover:scale-[101%] transition duration-500">
+                <span
+                    class="material-symbols-outlined mb-3 text-[#2563eb] dark:text-[#60a5fa] bg-[#DBEAFE] dark:bg-[#1E3160] px-3 py-3 rounded-xl">
+                    flare
+                </span>
+                <h3 class="font-bold mb-2">Specialty Items</h3>
+                <p class="text-[#4b5563] dark:text-[#9ca3af] max-w-[400px]">Expert handling of pianos, artwork,
+                    antiques, and other high-value items.</p>
+                <div class="flex flex-col mt-3">
+                    <div class="flex gap-2">
+                        <span class="material-symbols-outlined text-[#3b82f6]">
+                            check
+                        </span>
+                        <span class="text-[#4b5563] dark:text-[#9ca3af]">Custom crating</span>
+                    </div>
+                    <div class="flex gap-2">
+                        <span class="material-symbols-outlined text-[#3b82f6]">
+                            check
+                        </span>
+                        <span class="text-[#4b5563] dark:text-[#9ca3af]">White-glove service</span>
+                    </div>
+                    <div class="flex gap-2">
+                        <span class="material-symbols-outlined text-[#3b82f6]">
+                            check
+                        </span>
+                        <span class="text-[#4b5563] dark:text-[#9ca3af]">Full valuation coverage</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="how-it-works-section relative pt-[50px] pb-[80px]">
+        <div class="header mb-10 text-center">
+            <h3 class="font-bold text-[35px] dark:text-white">How It Works</h3>
+            <span class="text-[#4b5563] text-[18px]">Our proven moving process takes the stress out of your
+                relocation.</span>
+        </div>
+        <!-- DESKTOP -->
+        <div
+            class="process-timeline hidden lg:grid absolute top-[230px] left-0 h-[3px] w-full bg-[#BFDBFE] dark:bg-[#2563EB]">
+        </div>
+        <div class="step-num  hidden lg:grid relative grid grid-cols-4 text-center">
+            <p
+                class="w-20 h-20 flex items-center justify-center mx-auto text-[30px] text-[#fff] font-bold bg-[#2563EB] rounded-full">
+                1</p>
+            <p
+                class="w-20 h-20 flex items-center justify-center mx-auto text-[30px] text-[#fff] font-bold bg-[#2563EB] rounded-full">
+                2</p>
+            <p
+                class="w-20 h-20 flex items-center justify-center mx-auto text-[30px] text-[#fff] font-bold bg-[#2563EB] rounded-full">
+                3</p>
+            <p
+                class="w-20 h-20 flex items-center justify-center mx-auto text-[30px] text-[#fff] font-bold bg-[#2563EB] rounded-full">
+                4</p>
+        </div>
+        <div class="step-title hidden lg:grid text-center grid grid-cols-4 mt-3">
+            <p class="font-bold text-[18px] dark:text-[#fff]">Free Estimate</p>
+            <p class="font-bold text-[18px] dark:text-[#fff]">Schedule Move</p>
+            <p class="font-bold text-[18px] dark:text-[#fff]">Professional Packing</p>
+            <p class="font-bold text-[18px] dark:text-[#fff]">Safe Delivery</p>
+        </div>
+        <div class="step-content hidden lg:grid grid grid-cols-4 text-center text-[#4b5563]">
+            <p>We provide a detailed, no-obligation estimate based on your inventory.</p>
+            <p>Pick a date that works for you and we will confirm your crew and truck.</p>
+            <p>Our trained movers carefully pack and protect every item.</p>
+            <p>Your belongings arrive safely at your new home, on time and intact.</p>
+        </div>
+
+        <!-- MOBILE -->
+        <div class="lg:hidden">
+            <div class="flex gap-5">
+                <div class="flex flex-col items-center">
+                    <div
+                        class="w-20 h-20 flex items-center justify-center text-[30px] text-white font-bold bg-[#2563EB] rounded-full">
+                        1
+                    </div>
+                    <div class="w-[3px] h-full bg-[#BFDBFE] dark:bg-[#2563EB]"></div>
+                </div>
+                <div class="pt-3">
+                    <h3 class="font-bold text-[18px] dark:text-white">
+                        Free Estimate
+                    </h3>
+                    <p class="text-[#4b5563] dark:text-[#9ca3af] mt-2">
+                        We provide a detailed, no-obligation estimate based on your inventory.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex gap-5">
+                <div class="flex flex-col items-center">
+                    <div
+                        class="w-20 h-20 flex items-center justify-center text-[30px] text-white font-bold bg-[#2563EB] rounded-full">
+                        2
+                    </div>
+
+                    <div class="w-[3px] h-full bg-[#BFDBFE] dark:bg-[#2563EB]"></div>
+                </div>
+
+                <div class="pt-3">
+                    <h3 class="font-bold text-[18px] dark:text-white">
+                        Schedule Move
+                    </h3>
+
+                    <p class="text-[#4b5563] dark:text-[#9ca3af] mt-2">
+                        Pick a date that works for you and we will confirm your crew and truck.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex gap-5">
+                <div class="flex flex-col items-center">
+                    <div
+                        class="w-20 h-20 flex items-center justify-center text-[30px] text-white font-bold bg-[#2563EB] rounded-full">
+                        3
+                    </div>
+                    <div class="w-[3px] h-full bg-[#BFDBFE] dark:bg-[#2563EB]"></div>
+                </div>
+                <div class="pt-3">
+                    <h3 class="font-bold text-[18px] dark:text-white">
+                        Professional Packing
+                    </h3>
+                    <p class="text-[#4b5563] dark:text-[#9ca3af] mt-2">
+                        Our trained movers carefully pack and protect every item.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex gap-5">
+                <div class="flex flex-col items-center">
+                    <div
+                        class="w-20 h-20 flex items-center justify-center text-[30px] text-white font-bold bg-[#2563EB] rounded-full">
+                        4
+                    </div>
+                    <div class="w-[3px] h-full bg-[#BFDBFE] dark:bg-[#2563EB]"></div>
+                </div>
+                <div class="pt-3">
+                    <h3 class="font-bold text-[18px] dark:text-white">
+                        Safe Delivery
+                    </h3>
+                    <p class="text-[#4b5563] dark:text-[#9ca3af] mt-2">
+                        Your belongings arrive safely at your new home, on time and intact.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="start-section py-[90px]  bg-[#2563EB] dark:bg-[#1E3A8A] text-center">
+        <p class="mb-2 text-white font-bold text-[30px]">Ready to Get Started?</p>
+        <span class="mb-3 text-white">Planning a move? Get a free, no-obligation estimate today.</span>
+        <div class="mt-5 text-[#bfdbfe]">
+            <button class="bg-white text-[#2563eb] rounded-xl px-5 py-3 hover:scale-[101%] transition duration-500">Get
+                Free Estimate</button>
+        </div>
+    </div>
+
+    <div class="footer  px-10 py-[60px] bg-[#111827]">
+        <div class="flex flex-col lg:flex-row justify-between">
+            <div class="flex flex-col text-[#9ca3af]">
+                <div class="site-logo cursor-pointer mb-4">
+                    <a href="">
+                        <img src="https://swiftmove-colorlib.pages.dev/assets/img/logo-light.svg" alt="">
+                    </a>
+                </div>
+                <p class="mt-2 mb-3 hover:text-white transition duration-300 max-w-[330px]">Professional moving
+                    services that make
+                    your
+                    relocation stress-free. Licensed, insured, and trusted by thousands.</p>
+                <div>
+                    <div class="item mt-2">
+                        <a href="tel:+5558901234" class="flex items-center gap-2">
+                            <span class="material-symbols-outlined">
+                                call
+                            </span>
+                            <span>(555) 890-1234</span>
+                        </a>
+                    </div>
+                    <div class="item mt-2">
+                        <a class="flex items-center gap-2" href="mailto:info@swiftmove.com">
+                            <span class="material-symbols-outlined">
+                                mail
+                            </span>
+                            <span>info@switmove.com</span>
+                        </a>
+                    </div>
+                    <div class="item mt-2">
+                        <a class="flex items-center gap-2" href="https://maps.google.com/?q=New+York,+NY"
+                            target="blank">
+                            <span class="material-symbols-outlined">
+                                place
+                            </span>
+                            <span>123 Main Street, New York, NY</span> </a>
+                    </div>
+                </div>
+                <div class="icons flex gap-3 mt-7">
+                    <i
+                        class="fa-brands fa-facebook-f px-4 py-3 text-[25px] text-[#9ca3af] hover:text-[#fff] bg-[#1f2937] hover:bg-[#374151] transition duration-500 cursor-pointer rounded-lg"></i>
+                    <i
+                        class="fa-brands fa-x-twitter p-3 text-[27px] text-[#9ca3af] hover:text-[#fff] bg-[#1f2937] hover:bg-[#374151] transition duration-500 cursor-pointer rounded-lg"></i>
+                    <i
+                        class="fa-brands fa-instagram p-3 text-[27px] text-[#9ca3af] hover:text-[#fff] bg-[#1f2937] hover:bg-[#374151] transition duration-500 cursor-pointer rounded-lg"></i>
+                </div>
+            </div>
+            <div class="flex flex-col sm:grid sm:grid-cols-2 md:grid-cols-3 gap-10 lg:mx-auto mt-10 lg:mt-0">
+                <div class="flex flex-col gap-3">
+                    <p class="font-semibold text-white">Services</p>
+                    <a href="./index.html#services"
+                        class="text-[#9ca3af] hover:text-white transition duration-500">Local Moving</a>
+                    <a href="./index.html#services" class="text-[#9ca3af] hover:text-white transition duration-500">Long
+                        Distance</a>
+                    <a href="./index.html#services"
+                        class="text-[#9ca3af] hover:text-white transition duration-500">Commercial
+                        Moving</a>
+                    <a href="./index.html#services"
+                        class="text-[#9ca3af] hover:text-white transition duration-500">Packing
+                        Services</a>
+                    <a href="./index.html#services"
+                        class="text-[#9ca3af] hover:text-white transition duration-500">Storage
+                        Solutions</a>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <p class="font-semibold text-white">Company</p>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">About Us</a>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">Careers</a>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">Blog</a>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">Press</a>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <p class="font-semibold text-white">Support</p>
+                    <a href="#faq" class="text-[#9ca3af] hover:text-white transition duration-500">FAQ</a>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">Contact Us</a>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">Claims</a>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">Licensing</a>
+                </div>
+            </div>
+        </div>
+        <div class="w-full mt-10 border border-[#1f2937]"></div>
+        <div class="flex flex-col lg:flex-row justify-between mt-10">
+            <div class="flex items-center gap-1 text-[#9ca3af] text-sm lg:text-md">
+                <i class="fa-regular fa-copyright"></i>
+                <p> 2026 SwiftMove. All rights reserved. Licensed & Insured.</p>
+            </div>
+            <div class="text-[#9ca3af] hidden lg:block flex gap-3">
+                <a class="hover:text-white transition duration-500" href="./privacy.html">Privacy Policy</a>
+                <a class="hover:text-white transition duration-500" href="./TOS.html">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
