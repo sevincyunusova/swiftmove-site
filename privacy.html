@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftMove</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- GOOGLE FONTS ICONS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+</head>
+
+<body
+    class="bg-[#EFF6FF] dark:bg-[#0E1523] text-gray-900 dark:text-gray-100 transition-colors duration-300 overflow-x-hidden">
+    <nav
+        class="sticky top-0 w-full z-50 justify-between items-center flex px-5 py-5 bg-[#fff] w-full dark:bg-[#030712] transition-colors duration-300">
+        <div class="nav-logo cursor-pointer">
+            <a class=" dark:hidden" href="./index.html">
+                <img src="https://swiftmove-colorlib.pages.dev/assets/img/logo.svg" alt="SwiftMove-logo">
+            </a>
+            <a class="hidden dark:block" href="">
+                <img src="https://swiftmove-colorlib.pages.dev/assets/img/logo-light.svg" alt="">
+            </a>
+        </div>
+
+        <div id="nav-links"
+            class="hidden lg:static lg:block border-t border-b border-gray-300 dark:border-gray-500 md:border-t-0 md:border-b-0  absolute top-full left-0 w-full items-center px-3 py-5 md:p-0 bg-[#fff] dark:bg-[#030712] transition-colors duration-300">
+            <ul
+                class="flex flex-col lg:flex-row lg:items-center gap-8 mt-3 lg:mt-0 justify-center font-semibold items-start">
+                <li
+                    class="text-sm text-[#505560] dark:text-[#9ca3af] dark:hover:text-[#fff] hover:text-[#000]transition-colors duration-500">
+                    <a href="./about.html">About</a>
+                </li>
+                <li
+                    class="text-sm text-[#505560] dark:text-[#9ca3af] dark:hover:text-[#fff] hover:text-[#000]  transition-colors duration-500">
+                    <a href="./services.html">Services</a>
+                </li>
+                <li
+                    class="text-sm text-[#505560] dark:text-[#9ca3af] dark:hover:text-[#fff] hover:text-[#000] transition-colors duration-500 whitespace-nowrap">
+                    <a href="#hiw">How It
+                        Works</a>
+                </li>
+                <li
+                    class="text-sm text-[#505560] dark:text-[#9ca3af] dark:hover:text-[#fff] hover:text-[#000]  transition-colors duration-500">
+                    <a href="./index.html#areas">Areas</a>
+                </li>
+                <li
+                    class="text-sm text-[#505560] dark:text-[#9ca3af] dark:hover:text-[#fff] hover:text-[#000] transition-colors duration-500">
+                    <a href="">Pricing</a>
+                </li>
+                <li
+                    class="text-sm text-[#505560] dark:text-[#9ca3af] dark:hover:text-[#fff] hover:text-[#000] transition-colors duration-500">
+                    <a href="./index.html#testimonials">Testimonials</a>
+                </li>
+                <li
+                    class="text-sm text-[#505560] dark:text-[#9ca3af] dark:hover:text-[#fff] hover:text-[#000] transition-colors duration-500">
+                    <a href="./index.html#quote">Quote</a>
+                <li
+                    class="text-sm text-[#505560] dark:text-[#fff] dark:hover:text-[#000] transition-colors duration-500">
+                    <a href="">Contact</a>
+                </li>
+            </ul>
+            <div class="button mt-5 border-t border-gray-300 dark:border-gray-500 -mx-3 px-5 lg:hidden">
+                <button
+                    class="bg-[#f97316] hover:bg-[#EA580C] text-[#fff] font-semibold transition-colors duration-300 rounded-md w-full mt-5 py-2 whitespace-nowrap ">
+                    <a href="">Free Quote</a>
+                </button>
+            </div>
+        </div>
+
+        <div class="nav-actions flex items-center gap-3">
+            <button id="dark-light-btn"
+                class="hover:bg-[#F3F4F6] dark:hover:bg-[#1F2937] dark:text-[#80858D] flex justify-center items-center w-10 h-10 duration-500 rounded-md">
+                <span class="material-symbols-outlined text-md transition-colors duration-300">
+                    dark_mode
+                </span>
+            </button>
+            <div class="menu-btn lg:hidden flex items-center justify-center w-10 h-10 cursor-pointer">
+                <span id="nav-menu-icon" class="material-symbols-outlined">
+                    menu
+                </span>
+            </div>
+
+            <div class="button hidden lg:block">
+                <button
+                    class="bg-[#f97316] hover:bg-[#EA580C] text-[#fff] font-semibold transition-colors duration-300 rounded-md px-3 py-2 whitespace-nowrap ">
+                    <a href="">Free Quote</a>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <button id="backToTop"
+        class="hidden fixed bottom-8 right-8 z-50 flex items-center justify-center bg-[#2563eb] hover:bg-[#1E60F2] hover:shadow-[0_12px_35px_rgba(30,96,242,0.45)] rounded-full p-4 transition-all duration-500 text-white">
+        <span class="material-symbols-outlined block">
+            keyboard_control_key
+        </span>
+    </button>
+    <div class="hero-section py-[90px]  bg-[#2563EB] dark:bg-[#1E3A8A] text-center">
+        <h1 class="mb-2 text-white font-bold text-[50px]">Privacy Policy</h1>
+        <span class="mb-3 text-white">How we collect, use, and protect your personal information.</span>
+        <div class="mt-5 text-[#bfdbfe]">
+            <a class="hover:text-white transition duration-500" href="./index.html">Home</a>
+            <span>/</span>
+            <span class="text-white">Privacy Policy</span>
+        </div>
+    </div>
+    <div class="section  px-[180px] py-[100px]">
+        <span class="text-[#4b5563] dark:text-[#9ca3af]">Last updated: July 17, 2026</span>
+        <p class="mt-10 text-[25px] dark:text-white font-bold">1. Information We Collect</p>
+        <span class="text-[#4b5563] dark:text-[#9ca3af]">We collect information you provide directly to us, such as when
+            you create an account, make a purchase, fill out a form, or communicate with us. This may include:</span>
+        <div class="px-10 mt-5">
+            <div class="flex gap-2">
+                <span class="material-symbols-outlined text-[#3b82f6]">
+                    check
+                </span>
+                <span class="text-[#4b5563] dark:text-[#9ca3af]">
+                    Name, email address, phone number, and mailing address
+                </span>
+            </div>
+            <div class="flex gap-2">
+                <span class="material-symbols-outlined text-[#3b82f6]">
+                    check
+                </span>
+                <span class="text-[#4b5563] dark:text-[#9ca3af]">
+                    Payment information and billing details
+                </span>
+            </div>
+            <div class="flex gap-2">
+                <span class="material-symbols-outlined text-[#3b82f6]">
+                    check
+                </span>
+                <span class="text-[#4b5563] dark:text-[#9ca3af]">
+                    Account preferences and communication choices
+                </span>
+            </div>
+            <div class="flex gap-2">
+                <span class="material-symbols-outlined text-[#3b82f6]">
+                    check
+                </span>
+                <span class="text-[#4b5563] dark:text-[#9ca3af]">
+                    Any other information you choose to provide
+                </span>
+            </div>
+        </div>
+
+        <p class="mt-10 text-[25px] dark:text-white font-bold">2. How We Use Your Information</p>
+        <span class="text-[#4b5563] dark:text-[#9ca3af]">We use the information we collect to:</span>
+        <div class="px-10 mt-5">
+            <div class="flex gap-2">
+                <span class="material-symbols-outlined text-[#3b82f6]">
+                    check
+                </span>
+                <span class="text-[#4b5563] dark:text-[#9ca3af]">
+                    Provide, maintain, and improve our services
+                </span>
+            </div>
+            <div class="flex gap-2">
+                <span class="material-symbols-outlined text-[#3b82f6]">
+                    check
+                </span>
+                <span class="text-[#4b5563] dark:text-[#9ca3af]">
+                    Process transactions and send related information
+                </span>
+            </div>
+            <div class="flex gap-2">
+                <span class="material-symbols-outlined text-[#3b82f6]">
+                    check
+                </span>
+                <span class="text-[#4b5563] dark:text-[#9ca3af]">
+                    Send promotional communications (with your consent)
+                </span>
+            </div>
+            <div class="flex gap-2">
+                <span class="material-symbols-outlined text-[#3b82f6]">
+                    check
+                </span>
+                <span class="text-[#4b5563] dark:text-[#9ca3af]">
+                    Respond to your comments, questions, and requests
+                </span>
+            </div>
+        </div>
+
+        <p class="mt-10 text-[25px] dark:text-white font-bold">3. Information Sharing</p>
+        <span class="text-[#4b5563] dark:text-[#9ca3af]">We do not sell, trade, or otherwise transfer your personal
+            information to third parties without your consent, except as described in this policy. We may share
+            information with:</span>
+        <div class="px-10 mt-5">
+            <div class="flex gap-2">
+                <span class="material-symbols-outlined text-[#3b82f6]">
+                    check
+                </span>
+                <span class="text-[#4b5563] dark:text-[#9ca3af]">
+                    Service providers who assist in our operations
+                </span>
+            </div>
+            <div class="flex gap-2">
+                <span class="material-symbols-outlined text-[#3b82f6]">
+                    check
+                </span>
+                <span class="text-[#4b5563] dark:text-[#9ca3af]">
+                    Law enforcement when required by law
+                </span>
+            </div>
+            <div class="flex gap-2">
+                <span class="material-symbols-outlined text-[#3b82f6]">
+                    check
+                </span>
+                <span class="text-[#4b5563] dark:text-[#9ca3af]">
+                    Business partners with your explicit consent
+                </span>
+            </div>
+        </div>
+
+        <p class="mt-10 text-[25px] dark:text-white font-bold">4. Data Security</p>
+        <span class="text-[#4b5563] dark:text-[#9ca3af]">We implement appropriate technical and organizational security
+            measures to protect your personal information against unauthorized access, alteration, disclosure, or
+            destruction. These measures include encryption, secure servers, and regular security assessments.</span>
+
+        <p class="mt-10 text-[25px] dark:text-white font-bold">5. Cookies and Tracking
+        </p>
+        <span class="text-[#4b5563] dark:text-[#9ca3af]">We use cookies and similar tracking technologies to enhance
+            your experience on our website. You can control cookie preferences through your browser settings. For more
+            details, see our cookie consent banner when you first visit our site.</span>
+
+        <p class="mt-10 text-[25px] dark:text-white font-bold">6. Third-Party Links
+
+        </p>
+        <span class="text-[#4b5563] dark:text-[#9ca3af]">Our website may contain links to third-party sites. We are not
+            responsible for the privacy practices of these external sites. We encourage you to review their privacy
+            policies before providing any personal information.</span>
+    </div>
+
+    <div class="footer  px-10 py-[60px] bg-[#111827]">
+        <div class="flex flex-col lg:flex-row justify-between">
+            <div class="flex flex-col text-[#9ca3af]">
+                <div class="site-logo cursor-pointer mb-4">
+                    <a href="">
+                        <img src="https://swiftmove-colorlib.pages.dev/assets/img/logo-light.svg" alt="">
+                    </a>
+                </div>
+                <p class="mt-2 mb-3 hover:text-white transition duration-300 max-w-[330px]">Professional moving
+                    services that make
+                    your
+                    relocation stress-free. Licensed, insured, and trusted by thousands.</p>
+                <div>
+                    <div class="item mt-2">
+                        <a href="tel:+5558901234" class="flex items-center gap-2">
+                            <span class="material-symbols-outlined">
+                                call
+                            </span>
+                            <span>(555) 890-1234</span>
+                        </a>
+                    </div>
+                    <div class="item mt-2">
+                        <a class="flex items-center gap-2" href="mailto:info@swiftmove.com">
+                            <span class="material-symbols-outlined">
+                                mail
+                            </span>
+                            <span>info@switmove.com</span>
+                        </a>
+                    </div>
+                    <div class="item mt-2">
+                        <a class="flex items-center gap-2" href="https://maps.google.com/?q=New+York,+NY"
+                            target="blank">
+                            <span class="material-symbols-outlined">
+                                place
+                            </span>
+                            <span>123 Main Street, New York, NY</span> </a>
+                    </div>
+                </div>
+                <div class="icons flex gap-3 mt-7">
+                    <i
+                        class="fa-brands fa-facebook-f px-4 py-3 text-[25px] text-[#9ca3af] hover:text-[#fff] bg-[#1f2937] hover:bg-[#374151] transition duration-500 cursor-pointer rounded-lg"></i>
+                    <i
+                        class="fa-brands fa-x-twitter p-3 text-[27px] text-[#9ca3af] hover:text-[#fff] bg-[#1f2937] hover:bg-[#374151] transition duration-500 cursor-pointer rounded-lg"></i>
+                    <i
+                        class="fa-brands fa-instagram p-3 text-[27px] text-[#9ca3af] hover:text-[#fff] bg-[#1f2937] hover:bg-[#374151] transition duration-500 cursor-pointer rounded-lg"></i>
+                </div>
+            </div>
+            <div class="flex flex-col sm:grid sm:grid-cols-2 md:grid-cols-3 gap-10 lg:mx-auto mt-10 lg:mt-0">
+                <div class="flex flex-col gap-3">
+                    <p class="font-semibold text-white">Services</p>
+                    <a href="./index.html#services"
+                        class="text-[#9ca3af] hover:text-white transition duration-500">Local Moving</a>
+                    <a href="./index.html#services" class="text-[#9ca3af] hover:text-white transition duration-500">Long
+                        Distance</a>
+                    <a href="./index.html#services"
+                        class="text-[#9ca3af] hover:text-white transition duration-500">Commercial
+                        Moving</a>
+                    <a href="./index.html#services"
+                        class="text-[#9ca3af] hover:text-white transition duration-500">Packing
+                        Services</a>
+                    <a href="./index.html#services"
+                        class="text-[#9ca3af] hover:text-white transition duration-500">Storage
+                        Solutions</a>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <p class="font-semibold text-white">Company</p>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">About Us</a>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">Careers</a>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">Blog</a>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">Press</a>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <p class="font-semibold text-white">Support</p>
+                    <a href="#faq" class="text-[#9ca3af] hover:text-white transition duration-500">FAQ</a>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">Contact Us</a>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">Claims</a>
+                    <a href="#services" class="text-[#9ca3af] hover:text-white transition duration-500">Licensing</a>
+                </div>
+            </div>
+        </div>
+        <div class="w-full mt-10 border border-[#1f2937]"></div>
+        <div class="flex flex-col lg:flex-row justify-between mt-10">
+            <div class="flex items-center gap-1 text-[#9ca3af] text-sm lg:text-md">
+                <i class="fa-regular fa-copyright"></i>
+                <p> 2026 SwiftMove. All rights reserved. Licensed & Insured.</p>
+            </div>
+            <div class="text-[#9ca3af] hidden lg:block flex gap-3">
+                <a class="hover:text-white transition duration-500" href="./privacy.html">Privacy Policy</a>
+                <a class="hover:text-white transition duration-500" href="./TOS.html">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
